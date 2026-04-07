@@ -1,549 +1,542 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2708
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sky Co. | Web Design Studio</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --sky: #6C8EFF;
+    --sky-light: #EEF1FF;
+    --dark: #0F0F14;
+    --warm: #F5EDE3;
+  }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #fff; color: #111; }
 
-\f0\fs24 \cf0 <!DOCTYPE html>\
-<html lang="en">\
-<head>\
-<meta charset="UTF-8">\
-<meta name="viewport" content="width=device-width, initial-scale=1.0">\
-<title>Sky Co. | Web Design Studio</title>\
-<style>\
-  * \{ margin: 0; padding: 0; box-sizing: border-box; \}\
-  :root \{\
-    --sky: #6C8EFF;\
-    --sky-light: #EEF1FF;\
-    --dark: #0F0F14;\
-    --warm: #F5EDE3;\
-  \}\
-  body \{ font-family: 'Segoe UI', system-ui, sans-serif; background: #fff; color: #111; \}\
-\
-  /* NAV */\
-  nav \{\
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;\
-    display: flex; justify-content: space-between; align-items: center;\
-    padding: 1.2rem 2.5rem;\
-    background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);\
-    border-bottom: 1px solid #eee;\
-  \}\
-  .logo \{ font-size: 1.4rem; font-weight: 800; letter-spacing: -0.5px; color: var(--sky); \}\
-  nav ul \{ list-style: none; display: flex; gap: 2rem; \}\
-  nav a \{ text-decoration: none; color: #444; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; \}\
-  nav a:hover \{ color: var(--sky); \}\
-  .nav-cta \{\
-    background: var(--sky); color: #fff !important; padding: 0.5rem 1.2rem;\
-    border-radius: 50px; font-weight: 600 !important;\
-  \}\
-  .nav-cta:hover \{ background: #4f70f0; color: #fff !important; \}\
-\
-  /* HERO */\
-  .hero \{\
-    min-height: 100vh; display: flex; align-items: center; justify-content: center;\
-    text-align: center; padding: 6rem 2rem 4rem;\
-    background: linear-gradient(160deg, #fff 0%, var(--sky-light) 100%);\
-  \}\
-  .hero-badge \{\
-    display: inline-block; background: var(--sky-light); color: var(--sky);\
-    padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem;\
-    font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1.5rem;\
-  \}\
-  .hero h1 \{\
-    font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900;\
-    line-height: 1.1; letter-spacing: -2px; margin-bottom: 1.2rem;\
-    color: var(--dark);\
-  \}\
-  .hero h1 span \{ color: var(--sky); \}\
-  .hero p \{\
-    font-size: 1.15rem; color: #666; max-width: 520px;\
-    margin: 0 auto 2.5rem; line-height: 1.7;\
-  \}\
-  .hero-btns \{ display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; \}\
-  .btn-primary \{\
-    background: var(--sky); color: #fff; padding: 0.9rem 2rem;\
-    border-radius: 50px; font-weight: 700; font-size: 1rem;\
-    text-decoration: none; transition: transform 0.2s, box-shadow 0.2s;\
-    box-shadow: 0 4px 20px rgba(108,142,255,0.35);\
-  \}\
-  .btn-primary:hover \{ transform: translateY(-2px); box-shadow: 0 8px 28px rgba(108,142,255,0.45); \}\
-  .btn-secondary \{\
-    background: transparent; color: var(--dark); padding: 0.9rem 2rem;\
-    border-radius: 50px; font-weight: 600; font-size: 1rem;\
-    text-decoration: none; border: 2px solid #ddd; transition: border-color 0.2s;\
-  \}\
-  .btn-secondary:hover \{ border-color: var(--sky); color: var(--sky); \}\
-  .hero-stats \{\
-    display: flex; gap: 3rem; justify-content: center; margin-top: 4rem;\
-    flex-wrap: wrap;\
-  \}\
-  .stat \{ text-align: center; \}\
-  .stat-num \{ font-size: 2rem; font-weight: 900; color: var(--sky); \}\
-  .stat-label \{ font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px; \}\
-\
-  /* SECTION HEADERS */\
-  section \{ padding: 5rem 2rem; \}\
-  .section-label \{\
-    text-align: center; color: var(--sky); font-weight: 700;\
-    font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.8rem;\
-  \}\
-  .section-title \{\
-    text-align: center; font-size: clamp(1.8rem, 4vw, 2.8rem);\
-    font-weight: 900; letter-spacing: -1px; margin-bottom: 1rem; color: var(--dark);\
-  \}\
-  .section-sub \{ text-align: center; color: #777; max-width: 500px; margin: 0 auto 3rem; line-height: 1.6; \}\
-\
-  /* WHAT I BUILD */\
-  .services \{ background: #fafafa; \}\
-  .services-grid \{\
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));\
-    gap: 1.5rem; max-width: 1000px; margin: 0 auto;\
-  \}\
-  .service-card \{\
-    background: #fff; border-radius: 16px; padding: 2rem;\
-    border: 1px solid #eee; transition: transform 0.2s, box-shadow 0.2s;\
-  \}\
-  .service-card:hover \{ transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.07); \}\
-  .service-icon \{ font-size: 2rem; margin-bottom: 1rem; \}\
-  .service-card h3 \{ font-size: 1.1rem; font-weight: 800; margin-bottom: 0.5rem; \}\
-  .service-card p \{ color: #777; font-size: 0.9rem; line-height: 1.6; \}\
-\
-  /* PORTFOLIO */\
-  .portfolio-tabs \{\
-    display: flex; gap: 0.75rem; justify-content: center; margin-bottom: 2.5rem; flex-wrap: wrap;\
-  \}\
-  .tab \{\
-    padding: 0.5rem 1.2rem; border-radius: 50px; font-size: 0.85rem;\
-    font-weight: 600; cursor: pointer; border: 2px solid #ddd;\
-    background: transparent; color: #555; transition: all 0.2s;\
-  \}\
-  .tab.active, .tab:hover \{ background: var(--sky); border-color: var(--sky); color: #fff; \}\
-\
-  /* DEMO SITES */\
-  .demo-grid \{\
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\
-    gap: 1.5rem; max-width: 1100px; margin: 0 auto;\
-  \}\
-  .demo-card \{\
-    border-radius: 16px; overflow: hidden;\
-    box-shadow: 0 4px 24px rgba(0,0,0,0.1); transition: transform 0.2s;\
-  \}\
-  .demo-card:hover \{ transform: translateY(-4px); \}\
-  .demo-preview \{ height: 220px; position: relative; overflow: hidden; \}\
-  .demo-info \{ padding: 1.2rem 1.5rem; background: #fff; \}\
-  .demo-info h3 \{ font-size: 1rem; font-weight: 800; margin-bottom: 0.3rem; \}\
-  .demo-info p \{ font-size: 0.8rem; color: #888; \}\
-  .demo-tag \{\
-    display: inline-block; font-size: 0.7rem; font-weight: 700;\
-    padding: 0.2rem 0.6rem; border-radius: 50px; margin-top: 0.5rem;\
-  \}\
-\
-  /* DEMO 1 \'97 Sleek Minimal (nail salon) */\
-  .demo1-preview \{\
-    background: #fff; padding: 1.5rem; font-family: 'Georgia', serif;\
-  \}\
-  .demo1-nav \{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; \}\
-  .demo1-logo \{ font-size: 0.9rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; \}\
-  .demo1-links \{ display: flex; gap: 0.8rem; \}\
-  .demo1-link \{ font-size: 0.6rem; color: #999; letter-spacing: 1px; text-transform: uppercase; \}\
-  .demo1-hero \{ text-align: center; \}\
-  .demo1-hero h2 \{ font-size: 1.4rem; font-weight: 300; letter-spacing: 2px; color: #222; margin-bottom: 0.3rem; \}\
-  .demo1-hero h3 \{ font-size: 0.7rem; letter-spacing: 4px; text-transform: uppercase; color: #bbb; margin-bottom: 1rem; \}\
-  .demo1-img \{\
-    width: 100%; height: 80px; object-fit: cover;\
-    background: linear-gradient(135deg, #f5f0eb, #e8e0d8);\
-    border-radius: 4px; margin-bottom: 0.8rem;\
-    display: flex; align-items: center; justify-content: center;\
-    font-size: 1.5rem;\
-  \}\
-  .demo1-btn \{\
-    display: inline-block; border: 1px solid #222; padding: 0.3rem 1rem;\
-    font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase; color: #222;\
-  \}\
-\
-  /* DEMO 2 \'97 Bold Dark (auto shop) */\
-  .demo2-preview \{\
-    background: #0a0a0a; padding: 1.2rem; color: #fff;\
-  \}\
-  .demo2-accent \{ color: #FF5C2E; \}\
-  .demo2-logo \{ font-size: 1rem; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 1rem; \}\
-  .demo2-logo span \{ color: #FF5C2E; \}\
-  .demo2-hero h2 \{ font-size: 1.2rem; font-weight: 900; line-height: 1.2; margin-bottom: 0.5rem; \}\
-  .demo2-hero p \{ font-size: 0.65rem; color: #888; margin-bottom: 0.8rem; line-height: 1.5; \}\
-  .demo2-btn \{\
-    background: #FF5C2E; color: #fff; padding: 0.4rem 0.9rem;\
-    font-size: 0.65rem; font-weight: 700; display: inline-block;\
-    border-radius: 4px; text-transform: uppercase; letter-spacing: 1px;\
-  \}\
-  .demo2-stats \{ display: flex; gap: 1rem; margin-top: 1rem; \}\
-  .demo2-stat \{ text-align: center; \}\
-  .demo2-stat-num \{ font-size: 1rem; font-weight: 900; color: #FF5C2E; \}\
-  .demo2-stat-label \{ font-size: 0.55rem; color: #555; text-transform: uppercase; \}\
-\
-  /* DEMO 3 \'97 Warm Approachable (restaurant) */\
-  .demo3-preview \{\
-    background: #FFF8F2; padding: 1.2rem;\
-  \}\
-  .demo3-logo \{ font-size: 0.95rem; font-weight: 800; color: #8B4513; margin-bottom: 0.8rem; \}\
-  .demo3-hero \{ background: #8B4513; border-radius: 8px; padding: 1rem; color: #fff; margin-bottom: 0.8rem; \}\
-  .demo3-hero h2 \{ font-size: 1rem; font-weight: 800; margin-bottom: 0.3rem; \}\
-  .demo3-hero p \{ font-size: 0.65rem; opacity: 0.85; line-height: 1.4; \}\
-  .demo3-btn \{\
-    display: inline-block; background: #FFD700; color: #222;\
-    padding: 0.35rem 0.8rem; border-radius: 50px;\
-    font-size: 0.6rem; font-weight: 800; margin-top: 0.5rem;\
-  \}\
-  .demo3-cards \{ display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.4rem; \}\
-  .demo3-card \{\
-    background: #fff; border-radius: 6px; padding: 0.5rem;\
-    text-align: center; font-size: 0.6rem; color: #555;\
-    border: 1px solid #f0e0d0;\
-  \}\
-  .demo3-card-icon \{ font-size: 1rem; margin-bottom: 0.2rem; \}\
-  .demo3-card-name \{ font-weight: 700; font-size: 0.55rem; color: #333; \}\
-\
-  /* PROCESS */\
-  .process \{ background: var(--dark); color: #fff; \}\
-  .process .section-title \{ color: #fff; \}\
-  .process .section-sub \{ color: #888; \}\
-  .process-steps \{\
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\
-    gap: 2rem; max-width: 900px; margin: 0 auto;\
-  \}\
-  .process-step \{ text-align: center; \}\
-  .step-num \{\
-    width: 48px; height: 48px; background: var(--sky); border-radius: 50%;\
-    display: flex; align-items: center; justify-content: center;\
-    font-weight: 900; font-size: 1.1rem; margin: 0 auto 1rem;\
-  \}\
-  .process-step h3 \{ font-size: 1rem; font-weight: 800; margin-bottom: 0.5rem; \}\
-  .process-step p \{ font-size: 0.85rem; color: #888; line-height: 1.6; \}\
-\
-  /* PRICING */\
-  .pricing-card \{\
-    max-width: 420px; margin: 0 auto;\
-    background: linear-gradient(135deg, var(--sky), #4f70f0);\
-    border-radius: 24px; padding: 3rem 2.5rem; color: #fff; text-align: center;\
-    box-shadow: 0 20px 60px rgba(108,142,255,0.4);\
-  \}\
-  .pricing-label \{ font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; opacity: 0.8; margin-bottom: 0.5rem; \}\
-  .pricing-price \{ font-size: 4rem; font-weight: 900; letter-spacing: -2px; margin-bottom: 0.3rem; \}\
-  .pricing-price span \{ font-size: 1.5rem; vertical-align: super; \}\
-  .pricing-sub \{ opacity: 0.75; font-size: 0.9rem; margin-bottom: 2rem; \}\
-  .pricing-features \{ list-style: none; margin-bottom: 2rem; \}\
-  .pricing-features li \{ padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.15); font-size: 0.9rem; \}\
-  .pricing-features li:last-child \{ border-bottom: none; \}\
-  .pricing-features li::before \{ content: "\uc0\u10003   "; font-weight: 900; \}\
-  .pricing-btn \{\
-    display: inline-block; background: #fff; color: var(--sky);\
-    padding: 0.9rem 2.5rem; border-radius: 50px; font-weight: 800;\
-    font-size: 1rem; text-decoration: none; transition: transform 0.2s;\
-  \}\
-  .pricing-btn:hover \{ transform: scale(1.05); \}\
-\
-  /* CONTACT */\
-  .contact \{ background: var(--sky-light); \}\
-  .contact-box \{\
-    max-width: 560px; margin: 0 auto; background: #fff;\
-    border-radius: 20px; padding: 3rem; box-shadow: 0 8px 40px rgba(0,0,0,0.06);\
-  \}\
-  .form-row \{ display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; \}\
-  .form-group \{ display: flex; flex-direction: column; margin-bottom: 1rem; \}\
-  .form-group label \{ font-size: 0.8rem; font-weight: 700; margin-bottom: 0.4rem; color: #444; \}\
-  .form-group input, .form-group textarea, .form-group select \{\
-    padding: 0.75rem 1rem; border: 1.5px solid #e5e5e5; border-radius: 10px;\
-    font-size: 0.9rem; outline: none; transition: border-color 0.2s; font-family: inherit;\
-  \}\
-  .form-group input:focus, .form-group textarea:focus, .form-group select:focus \{\
-    border-color: var(--sky);\
-  \}\
-  .form-group textarea \{ resize: vertical; min-height: 100px; \}\
-  .form-submit \{\
-    width: 100%; background: var(--sky); color: #fff; border: none;\
-    padding: 1rem; border-radius: 50px; font-weight: 700; font-size: 1rem;\
-    cursor: pointer; transition: background 0.2s;\
-  \}\
-  .form-submit:hover \{ background: #4f70f0; \}\
-\
-  /* FOOTER */\
-  footer \{\
-    background: var(--dark); color: #fff; text-align: center;\
-    padding: 2.5rem 2rem;\
-  \}\
-  footer .logo \{ color: var(--sky); font-size: 1.5rem; margin-bottom: 0.5rem; display: block; \}\
-  footer p \{ color: #555; font-size: 0.85rem; \}\
-\
-  @media (max-width: 600px) \{\
-    nav ul \{ display: none; \}\
-    .form-row \{ grid-template-columns: 1fr; \}\
-    .hero-stats \{ gap: 1.5rem; \}\
-  \}\
-</style>\
-</head>\
-<body>\
-\
-<nav>\
-  <div class="logo">Sky Co.</div>\
-  <ul>\
-    <li><a href="#portfolio">Portfolio</a></li>\
-    <li><a href="#process">Process</a></li>\
-    <li><a href="#pricing">Pricing</a></li>\
-    <li><a href="#contact" class="nav-cta">Get Started</a></li>\
-  </ul>\
-</nav>\
-\
-<!-- HERO -->\
-<section class="hero">\
-  <div>\
-    <div class="hero-badge">\uc0\u10022  West Hills, CA</div>\
-    <h1>Your Business Deserves<br>a <span>Website That Works</span></h1>\
-    <p>Sky Co. builds beautiful, modern websites for local businesses. Starting at $1,200 \'97 delivered in 7 days.</p>\
-    <div class="hero-btns">\
-      <a href="#contact" class="btn-primary">Get a Free Quote \uc0\u8594 </a>\
-      <a href="#portfolio" class="btn-secondary">See My Work</a>\
-    </div>\
-    <div class="hero-stats">\
-      <div class="stat">\
-        <div class="stat-num">7</div>\
-        <div class="stat-label">Day Delivery</div>\
-      </div>\
-      <div class="stat">\
-        <div class="stat-num">$1,200</div>\
-        <div class="stat-label">Flat Rate</div>\
-      </div>\
-      <div class="stat">\
-        <div class="stat-num">100%</div>\
-        <div class="stat-label">Satisfaction</div>\
-      </div>\
-    </div>\
-  </div>\
-</section>\
-\
-<!-- WHAT I BUILD -->\
-<section class="services">\
-  <div class="section-label">What I Build</div>\
-  <h2 class="section-title">Websites for Every Kind of Business</h2>\
-  <p class="section-sub">From spas to shops to service providers \'97 every site is custom-designed to match your brand.</p>\
-  <div class="services-grid">\
-    <div class="service-card">\
-      <div class="service-icon">\uc0\u55357 \u56453 </div>\
-      <h3>Beauty & Wellness</h3>\
-      <p>Salons, spas, nail studios, and fitness studios. Clean, elegant, and appointment-ready.</p>\
-    </div>\
-    <div class="service-card">\
-      <div class="service-icon">\uc0\u55357 \u56615 </div>\
-      <h3>Trades & Auto</h3>\
-      <p>Mechanics, contractors, and service pros. Bold and trustworthy designs that drive calls.</p>\
-    </div>\
-    <div class="service-card">\
-      <div class="service-icon">\uc0\u55356 \u57213 \u65039 </div>\
-      <h3>Restaurants & Caf\'e9s</h3>\
-      <p>Warm, inviting sites with menus, hours, and locations front and center.</p>\
-    </div>\
-    <div class="service-card">\
-      <div class="service-icon">\uc0\u9878 \u65039 </div>\
-      <h3>Professional Services</h3>\
-      <p>Law offices, dental practices, and consultants. Polished and credibility-first.</p>\
-    </div>\
-  </div>\
-</section>\
-\
-<!-- PORTFOLIO -->\
-<section id="portfolio">\
-  <div class="section-label">Portfolio</div>\
-  <h2 class="section-title">Three Styles, One Studio</h2>\
-  <p class="section-sub">Every business has a different personality. Here are three distinct design styles I can build for you.</p>\
-\
-  <div class="demo-grid">\
-\
-    <!-- Demo 1: Sleek Minimal -->\
-    <div class="demo-card">\
-      <div class="demo-preview demo1-preview">\
-        <div class="demo1-nav">\
-          <div class="demo1-logo">Lumi\'e8re Nail Studio</div>\
-          <div class="demo1-links">\
-            <span class="demo1-link">Services</span>\
-            <span class="demo1-link">Book</span>\
-            <span class="demo1-link">Contact</span>\
-          </div>\
-        </div>\
-        <div class="demo1-hero">\
-          <h2>Beauty, Refined</h2>\
-          <h3>West Hills' Premier Nail Studio</h3>\
-          <div class="demo1-img">\uc0\u55356 \u57144 </div>\
-          <div class="demo1-btn">Book Appointment</div>\
-        </div>\
-      </div>\
-      <div class="demo-info">\
-        <h3>Sleek & Minimal</h3>\
-        <p>Clean lines, soft tones, editorial feel</p>\
-        <span class="demo-tag" style="background:#f5f0f7;color:#8B4F9E;">Salons \'b7 Spas \'b7 Wellness</span>\
-      </div>\
-    </div>\
-\
-    <!-- Demo 2: Bold Dark -->\
-    <div class="demo-card">\
-      <div class="demo-preview demo2-preview">\
-        <div class="demo2-logo">IRON<span>CLAD</span> AUTO</div>\
-        <div class="demo2-hero">\
-          <h2>WE FIX CARS.<br>WE MEAN IT.</h2>\
-          <p>Honest diagnostics. Fair prices. Done right \'97 or it's on us. West Hills' most trusted shop since 2009.</p>\
-          <div class="demo2-btn">Book a Service</div>\
-        </div>\
-        <div class="demo2-stats">\
-          <div class="demo2-stat">\
-            <div class="demo2-stat-num">4.9\uc0\u9733 </div>\
-            <div class="demo2-stat-label">Google Rating</div>\
-          </div>\
-          <div class="demo2-stat">\
-            <div class="demo2-stat-num">15yr</div>\
-            <div class="demo2-stat-label">In Business</div>\
-          </div>\
-          <div class="demo2-stat">\
-            <div class="demo2-stat-num">5k+</div>\
-            <div class="demo2-stat-label">Cars Serviced</div>\
-          </div>\
-        </div>\
-      </div>\
-      <div class="demo-info">\
-        <h3>Bold & Modern</h3>\
-        <p>Dark theme, high energy, built to convert</p>\
-        <span class="demo-tag" style="background:#fff1ed;color:#FF5C2E;">Auto \'b7 Trades \'b7 Fitness</span>\
-      </div>\
-    </div>\
-\
-    <!-- Demo 3: Warm Approachable -->\
-    <div class="demo-card">\
-      <div class="demo-preview demo3-preview">\
-        <div class="demo3-logo">\uc0\u55356 \u57151  Harvest Table</div>\
-        <div class="demo3-hero">\
-          <h2>Food Made With Love</h2>\
-          <p>Farm-to-table cooking in the heart of West Hills. Open daily for breakfast & brunch.</p>\
-          <div class="demo3-btn">View Menu \uc0\u8594 </div>\
-        </div>\
-        <div class="demo3-cards">\
-          <div class="demo3-card">\
-            <div class="demo3-card-icon">\uc0\u9200 </div>\
-            <div class="demo3-card-name">Hours</div>\
-            <div>8am\'963pm</div>\
-          </div>\
-          <div class="demo3-card">\
-            <div class="demo3-card-icon">\uc0\u55357 \u56525 </div>\
-            <div class="demo3-card-name">Location</div>\
-            <div>West Hills</div>\
-          </div>\
-          <div class="demo3-card">\
-            <div class="demo3-card-icon">\uc0\u55357 \u56542 </div>\
-            <div class="demo3-card-name">Reserve</div>\
-            <div>Call us</div>\
-          </div>\
-        </div>\
-      </div>\
-      <div class="demo-info">\
-        <h3>Warm & Approachable</h3>\
-        <p>Friendly, inviting, community-first feel</p>\
-        <span class="demo-tag" style="background:#fff8ed;color:#B8680A;">Restaurants \'b7 Caf\'e9s \'b7 Local Shops</span>\
-      </div>\
-    </div>\
-\
-  </div>\
-</section>\
-\
-<!-- PROCESS -->\
-<section id="process" class="process">\
-  <div class="section-label" style="color:#6C8EFF;">How It Works</div>\
-  <h2 class="section-title">Simple. Fast. Done.</h2>\
-  <p class="section-sub">From first contact to live website in 7 days.</p>\
-  <div class="process-steps">\
-    <div class="process-step">\
-      <div class="step-num">1</div>\
-      <h3>Free Consultation</h3>\
-      <p>We chat about your business, your goals, and the look you're going for. 15 minutes, no pressure.</p>\
-    </div>\
-    <div class="process-step">\
-      <div class="step-num">2</div>\
-      <h3>Design & Build</h3>\
-      <p>I build your custom site and send a preview within 5 days for your feedback.</p>\
-    </div>\
-    <div class="process-step">\
-      <div class="step-num">3</div>\
-      <h3>Revisions</h3>\
-      <p>You get 2 rounds of revisions to make sure everything is exactly how you want it.</p>\
-    </div>\
-    <div class="process-step">\
-      <div class="step-num">4</div>\
-      <h3>Launch \uc0\u55357 \u56960 </h3>\
-      <p>Your site goes live. I handle everything \'97 no tech headaches on your end.</p>\
-    </div>\
-  </div>\
-</section>\
-\
-<!-- PRICING -->\
-<section id="pricing">\
-  <div class="section-label">Pricing</div>\
-  <h2 class="section-title">One Price. Everything Included.</h2>\
-  <p class="section-sub">No hidden fees. No subscriptions. No surprises.</p>\
-  <div class="pricing-card">\
-    <div class="pricing-label">Complete Website Package</div>\
-    <div class="pricing-price"><span>$</span>1,200</div>\
-    <div class="pricing-sub">One-time flat fee \'95 Delivered in 7 days</div>\
-    <ul class="pricing-features">\
-      <li>Custom design (your style, your brand)</li>\
-      <li>Mobile-friendly & fast loading</li>\
-      <li>Up to 5 pages</li>\
-      <li>Contact form & Google Maps</li>\
-      <li>2 rounds of revisions</li>\
-      <li>SEO basics included</li>\
-      <li>1 month of free support after launch</li>\
-    </ul>\
-    <a href="#contact" class="pricing-btn">Claim Your Spot \uc0\u8594 </a>\
-  </div>\
-</section>\
-\
-<!-- CONTACT -->\
-<section id="contact" class="contact">\
-  <div class="section-label">Get Started</div>\
-  <h2 class="section-title">Let's Build Your Website</h2>\
-  <p class="section-sub">Fill out the form and I'll be in touch within 24 hours.</p>\
-  <div class="contact-box">\
-    <div class="form-row">\
-      <div class="form-group">\
-        <label>Your Name</label>\
-        <input type="text" placeholder="Jane Smith">\
-      </div>\
-      <div class="form-group">\
-        <label>Business Name</label>\
-        <input type="text" placeholder="Jane's Nail Spa">\
-      </div>\
-    </div>\
-    <div class="form-group">\
-      <label>Email</label>\
-      <input type="email" placeholder="jane@yourbusiness.com">\
-    </div>\
-    <div class="form-group">\
-      <label>Business Type</label>\
-      <select>\
-        <option>Beauty / Nail Salon</option>\
-        <option>Auto / Trades</option>\
-        <option>Restaurant / Caf\'e9</option>\
-        <option>Dental / Medical</option>\
-        <option>Law / Professional</option>\
-        <option>Other</option>\
-      </select>\
-    </div>\
-    <div class="form-group">\
-      <label>Tell me about your business</label>\
-      <textarea placeholder="What do you do, and what do you need from your website?"></textarea>\
-    </div>\
-    <button class="form-submit">Send My Request \uc0\u8594 </button>\
-  </div>\
-</section>\
-\
-<footer>\
-  <span class="logo">Sky Co.</span>\
-  <p>West Hills, CA \'b7 skylar@skyco.design \'b7 Beautiful websites for local businesses</p>\
-</footer>\
-\
-</body>\
-</html>}
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.2rem 2.5rem;
+    background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid #eee;
+  }
+  .logo { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.5px; color: var(--sky); }
+  nav ul { list-style: none; display: flex; gap: 2rem; }
+  nav a { text-decoration: none; color: #444; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+  nav a:hover { color: var(--sky); }
+  .nav-cta {
+    background: var(--sky); color: #fff !important; padding: 0.5rem 1.2rem;
+    border-radius: 50px; font-weight: 600 !important;
+  }
+  .nav-cta:hover { background: #4f70f0; color: #fff !important; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    text-align: center; padding: 6rem 2rem 4rem;
+    background: linear-gradient(160deg, #fff 0%, var(--sky-light) 100%);
+  }
+  .hero-badge {
+    display: inline-block; background: var(--sky-light); color: var(--sky);
+    padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem;
+    font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1.5rem;
+  }
+  .hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900;
+    line-height: 1.1; letter-spacing: -2px; margin-bottom: 1.2rem;
+    color: var(--dark);
+  }
+  .hero h1 span { color: var(--sky); }
+  .hero p {
+    font-size: 1.15rem; color: #666; max-width: 520px;
+    margin: 0 auto 2.5rem; line-height: 1.7;
+  }
+  .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--sky); color: #fff; padding: 0.9rem 2rem;
+    border-radius: 50px; font-weight: 700; font-size: 1rem;
+    text-decoration: none; transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(108,142,255,0.35);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(108,142,255,0.45); }
+  .btn-secondary {
+    background: transparent; color: var(--dark); padding: 0.9rem 2rem;
+    border-radius: 50px; font-weight: 600; font-size: 1rem;
+    text-decoration: none; border: 2px solid #ddd; transition: border-color 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--sky); color: var(--sky); }
+  .hero-stats {
+    display: flex; gap: 3rem; justify-content: center; margin-top: 4rem;
+    flex-wrap: wrap;
+  }
+  .stat { text-align: center; }
+  .stat-num { font-size: 2rem; font-weight: 900; color: var(--sky); }
+  .stat-label { font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+
+  /* SECTION HEADERS */
+  section { padding: 5rem 2rem; }
+  .section-label {
+    text-align: center; color: var(--sky); font-weight: 700;
+    font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.8rem;
+  }
+  .section-title {
+    text-align: center; font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 900; letter-spacing: -1px; margin-bottom: 1rem; color: var(--dark);
+  }
+  .section-sub { text-align: center; color: #777; max-width: 500px; margin: 0 auto 3rem; line-height: 1.6; }
+
+  /* WHAT I BUILD */
+  .services { background: #fafafa; }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem; max-width: 1000px; margin: 0 auto;
+  }
+  .service-card {
+    background: #fff; border-radius: 16px; padding: 2rem;
+    border: 1px solid #eee; transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.07); }
+  .service-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .service-card h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 0.5rem; }
+  .service-card p { color: #777; font-size: 0.9rem; line-height: 1.6; }
+
+  /* PORTFOLIO */
+  .portfolio-tabs {
+    display: flex; gap: 0.75rem; justify-content: center; margin-bottom: 2.5rem; flex-wrap: wrap;
+  }
+  .tab {
+    padding: 0.5rem 1.2rem; border-radius: 50px; font-size: 0.85rem;
+    font-weight: 600; cursor: pointer; border: 2px solid #ddd;
+    background: transparent; color: #555; transition: all 0.2s;
+  }
+  .tab.active, .tab:hover { background: var(--sky); border-color: var(--sky); color: #fff; }
+
+  /* DEMO SITES */
+  .demo-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem; max-width: 1100px; margin: 0 auto;
+  }
+  .demo-card {
+    border-radius: 16px; overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.1); transition: transform 0.2s;
+  }
+  .demo-card:hover { transform: translateY(-4px); }
+  .demo-preview { height: 220px; position: relative; overflow: hidden; }
+  .demo-info { padding: 1.2rem 1.5rem; background: #fff; }
+  .demo-info h3 { font-size: 1rem; font-weight: 800; margin-bottom: 0.3rem; }
+  .demo-info p { font-size: 0.8rem; color: #888; }
+  .demo-tag {
+    display: inline-block; font-size: 0.7rem; font-weight: 700;
+    padding: 0.2rem 0.6rem; border-radius: 50px; margin-top: 0.5rem;
+  }
+
+  /* DEMO 1 — Sleek Minimal (nail salon) */
+  .demo1-preview {
+    background: #fff; padding: 1.5rem; font-family: 'Georgia', serif;
+  }
+  .demo1-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+  .demo1-logo { font-size: 0.9rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; }
+  .demo1-links { display: flex; gap: 0.8rem; }
+  .demo1-link { font-size: 0.6rem; color: #999; letter-spacing: 1px; text-transform: uppercase; }
+  .demo1-hero { text-align: center; }
+  .demo1-hero h2 { font-size: 1.4rem; font-weight: 300; letter-spacing: 2px; color: #222; margin-bottom: 0.3rem; }
+  .demo1-hero h3 { font-size: 0.7rem; letter-spacing: 4px; text-transform: uppercase; color: #bbb; margin-bottom: 1rem; }
+  .demo1-img {
+    width: 100%; height: 80px; object-fit: cover;
+    background: linear-gradient(135deg, #f5f0eb, #e8e0d8);
+    border-radius: 4px; margin-bottom: 0.8rem;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem;
+  }
+  .demo1-btn {
+    display: inline-block; border: 1px solid #222; padding: 0.3rem 1rem;
+    font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase; color: #222;
+  }
+
+  /* DEMO 2 — Bold Dark (auto shop) */
+  .demo2-preview {
+    background: #0a0a0a; padding: 1.2rem; color: #fff;
+  }
+  .demo2-accent { color: #FF5C2E; }
+  .demo2-logo { font-size: 1rem; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 1rem; }
+  .demo2-logo span { color: #FF5C2E; }
+  .demo2-hero h2 { font-size: 1.2rem; font-weight: 900; line-height: 1.2; margin-bottom: 0.5rem; }
+  .demo2-hero p { font-size: 0.65rem; color: #888; margin-bottom: 0.8rem; line-height: 1.5; }
+  .demo2-btn {
+    background: #FF5C2E; color: #fff; padding: 0.4rem 0.9rem;
+    font-size: 0.65rem; font-weight: 700; display: inline-block;
+    border-radius: 4px; text-transform: uppercase; letter-spacing: 1px;
+  }
+  .demo2-stats { display: flex; gap: 1rem; margin-top: 1rem; }
+  .demo2-stat { text-align: center; }
+  .demo2-stat-num { font-size: 1rem; font-weight: 900; color: #FF5C2E; }
+  .demo2-stat-label { font-size: 0.55rem; color: #555; text-transform: uppercase; }
+
+  /* DEMO 3 — Warm Approachable (restaurant) */
+  .demo3-preview {
+    background: #FFF8F2; padding: 1.2rem;
+  }
+  .demo3-logo { font-size: 0.95rem; font-weight: 800; color: #8B4513; margin-bottom: 0.8rem; }
+  .demo3-hero { background: #8B4513; border-radius: 8px; padding: 1rem; color: #fff; margin-bottom: 0.8rem; }
+  .demo3-hero h2 { font-size: 1rem; font-weight: 800; margin-bottom: 0.3rem; }
+  .demo3-hero p { font-size: 0.65rem; opacity: 0.85; line-height: 1.4; }
+  .demo3-btn {
+    display: inline-block; background: #FFD700; color: #222;
+    padding: 0.35rem 0.8rem; border-radius: 50px;
+    font-size: 0.6rem; font-weight: 800; margin-top: 0.5rem;
+  }
+  .demo3-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.4rem; }
+  .demo3-card {
+    background: #fff; border-radius: 6px; padding: 0.5rem;
+    text-align: center; font-size: 0.6rem; color: #555;
+    border: 1px solid #f0e0d0;
+  }
+  .demo3-card-icon { font-size: 1rem; margin-bottom: 0.2rem; }
+  .demo3-card-name { font-weight: 700; font-size: 0.55rem; color: #333; }
+
+  /* PROCESS */
+  .process { background: var(--dark); color: #fff; }
+  .process .section-title { color: #fff; }
+  .process .section-sub { color: #888; }
+  .process-steps {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem; max-width: 900px; margin: 0 auto;
+  }
+  .process-step { text-align: center; }
+  .step-num {
+    width: 48px; height: 48px; background: var(--sky); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 1.1rem; margin: 0 auto 1rem;
+  }
+  .process-step h3 { font-size: 1rem; font-weight: 800; margin-bottom: 0.5rem; }
+  .process-step p { font-size: 0.85rem; color: #888; line-height: 1.6; }
+
+  /* PRICING */
+  .pricing-card {
+    max-width: 420px; margin: 0 auto;
+    background: linear-gradient(135deg, var(--sky), #4f70f0);
+    border-radius: 24px; padding: 3rem 2.5rem; color: #fff; text-align: center;
+    box-shadow: 0 20px 60px rgba(108,142,255,0.4);
+  }
+  .pricing-label { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; opacity: 0.8; margin-bottom: 0.5rem; }
+  .pricing-price { font-size: 4rem; font-weight: 900; letter-spacing: -2px; margin-bottom: 0.3rem; }
+  .pricing-price span { font-size: 1.5rem; vertical-align: super; }
+  .pricing-sub { opacity: 0.75; font-size: 0.9rem; margin-bottom: 2rem; }
+  .pricing-features { list-style: none; margin-bottom: 2rem; }
+  .pricing-features li { padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.15); font-size: 0.9rem; }
+  .pricing-features li:last-child { border-bottom: none; }
+  .pricing-features li::before { content: "✓  "; font-weight: 900; }
+  .pricing-btn {
+    display: inline-block; background: #fff; color: var(--sky);
+    padding: 0.9rem 2.5rem; border-radius: 50px; font-weight: 800;
+    font-size: 1rem; text-decoration: none; transition: transform 0.2s;
+  }
+  .pricing-btn:hover { transform: scale(1.05); }
+
+  /* CONTACT */
+  .contact { background: var(--sky-light); }
+  .contact-box {
+    max-width: 560px; margin: 0 auto; background: #fff;
+    border-radius: 20px; padding: 3rem; box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  .form-group { display: flex; flex-direction: column; margin-bottom: 1rem; }
+  .form-group label { font-size: 0.8rem; font-weight: 700; margin-bottom: 0.4rem; color: #444; }
+  .form-group input, .form-group textarea, .form-group select {
+    padding: 0.75rem 1rem; border: 1.5px solid #e5e5e5; border-radius: 10px;
+    font-size: 0.9rem; outline: none; transition: border-color 0.2s; font-family: inherit;
+  }
+  .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    border-color: var(--sky);
+  }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .form-submit {
+    width: 100%; background: var(--sky); color: #fff; border: none;
+    padding: 1rem; border-radius: 50px; font-weight: 700; font-size: 1rem;
+    cursor: pointer; transition: background 0.2s;
+  }
+  .form-submit:hover { background: #4f70f0; }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark); color: #fff; text-align: center;
+    padding: 2.5rem 2rem;
+  }
+  footer .logo { color: var(--sky); font-size: 1.5rem; margin-bottom: 0.5rem; display: block; }
+  footer p { color: #555; font-size: 0.85rem; }
+
+  @media (max-width: 600px) {
+    nav ul { display: none; }
+    .form-row { grid-template-columns: 1fr; }
+    .hero-stats { gap: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Sky Co.</div>
+  <ul>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#contact" class="nav-cta">Get Started</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <div class="hero-badge">✦ West Hills, CA</div>
+    <h1>Your Business Deserves<br>a <span>Website That Works</span></h1>
+    <p>Sky Co. builds beautiful, modern websites for local businesses. Starting at $1,200 — delivered in 7 days.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Get a Free Quote →</a>
+      <a href="#portfolio" class="btn-secondary">See My Work</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">7</div>
+        <div class="stat-label">Day Delivery</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">$1,200</div>
+        <div class="stat-label">Flat Rate</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Satisfaction</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT I BUILD -->
+<section class="services">
+  <div class="section-label">What I Build</div>
+  <h2 class="section-title">Websites for Every Kind of Business</h2>
+  <p class="section-sub">From spas to shops to service providers — every site is custom-designed to match your brand.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">💅</div>
+      <h3>Beauty & Wellness</h3>
+      <p>Salons, spas, nail studios, and fitness studios. Clean, elegant, and appointment-ready.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔧</div>
+      <h3>Trades & Auto</h3>
+      <p>Mechanics, contractors, and service pros. Bold and trustworthy designs that drive calls.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🍽️</div>
+      <h3>Restaurants & Cafés</h3>
+      <p>Warm, inviting sites with menus, hours, and locations front and center.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">⚖️</div>
+      <h3>Professional Services</h3>
+      <p>Law offices, dental practices, and consultants. Polished and credibility-first.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="section-label">Portfolio</div>
+  <h2 class="section-title">Three Styles, One Studio</h2>
+  <p class="section-sub">Every business has a different personality. Here are three distinct design styles I can build for you.</p>
+
+  <div class="demo-grid">
+
+    <!-- Demo 1: Sleek Minimal -->
+    <div class="demo-card">
+      <div class="demo-preview demo1-preview">
+        <div class="demo1-nav">
+          <div class="demo1-logo">Lumière Nail Studio</div>
+          <div class="demo1-links">
+            <span class="demo1-link">Services</span>
+            <span class="demo1-link">Book</span>
+            <span class="demo1-link">Contact</span>
+          </div>
+        </div>
+        <div class="demo1-hero">
+          <h2>Beauty, Refined</h2>
+          <h3>West Hills' Premier Nail Studio</h3>
+          <div class="demo1-img">🌸</div>
+          <div class="demo1-btn">Book Appointment</div>
+        </div>
+      </div>
+      <div class="demo-info">
+        <h3>Sleek & Minimal</h3>
+        <p>Clean lines, soft tones, editorial feel</p>
+        <span class="demo-tag" style="background:#f5f0f7;color:#8B4F9E;">Salons · Spas · Wellness</span>
+      </div>
+    </div>
+
+    <!-- Demo 2: Bold Dark -->
+    <div class="demo-card">
+      <div class="demo-preview demo2-preview">
+        <div class="demo2-logo">IRON<span>CLAD</span> AUTO</div>
+        <div class="demo2-hero">
+          <h2>WE FIX CARS.<br>WE MEAN IT.</h2>
+          <p>Honest diagnostics. Fair prices. Done right — or it's on us. West Hills' most trusted shop since 2009.</p>
+          <div class="demo2-btn">Book a Service</div>
+        </div>
+        <div class="demo2-stats">
+          <div class="demo2-stat">
+            <div class="demo2-stat-num">4.9★</div>
+            <div class="demo2-stat-label">Google Rating</div>
+          </div>
+          <div class="demo2-stat">
+            <div class="demo2-stat-num">15yr</div>
+            <div class="demo2-stat-label">In Business</div>
+          </div>
+          <div class="demo2-stat">
+            <div class="demo2-stat-num">5k+</div>
+            <div class="demo2-stat-label">Cars Serviced</div>
+          </div>
+        </div>
+      </div>
+      <div class="demo-info">
+        <h3>Bold & Modern</h3>
+        <p>Dark theme, high energy, built to convert</p>
+        <span class="demo-tag" style="background:#fff1ed;color:#FF5C2E;">Auto · Trades · Fitness</span>
+      </div>
+    </div>
+
+    <!-- Demo 3: Warm Approachable -->
+    <div class="demo-card">
+      <div class="demo-preview demo3-preview">
+        <div class="demo3-logo">🌿 Harvest Table</div>
+        <div class="demo3-hero">
+          <h2>Food Made With Love</h2>
+          <p>Farm-to-table cooking in the heart of West Hills. Open daily for breakfast & brunch.</p>
+          <div class="demo3-btn">View Menu →</div>
+        </div>
+        <div class="demo3-cards">
+          <div class="demo3-card">
+            <div class="demo3-card-icon">⏰</div>
+            <div class="demo3-card-name">Hours</div>
+            <div>8am–3pm</div>
+          </div>
+          <div class="demo3-card">
+            <div class="demo3-card-icon">📍</div>
+            <div class="demo3-card-name">Location</div>
+            <div>West Hills</div>
+          </div>
+          <div class="demo3-card">
+            <div class="demo3-card-icon">📞</div>
+            <div class="demo3-card-name">Reserve</div>
+            <div>Call us</div>
+          </div>
+        </div>
+      </div>
+      <div class="demo-info">
+        <h3>Warm & Approachable</h3>
+        <p>Friendly, inviting, community-first feel</p>
+        <span class="demo-tag" style="background:#fff8ed;color:#B8680A;">Restaurants · Cafés · Local Shops</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="process">
+  <div class="section-label" style="color:#6C8EFF;">How It Works</div>
+  <h2 class="section-title">Simple. Fast. Done.</h2>
+  <p class="section-sub">From first contact to live website in 7 days.</p>
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="step-num">1</div>
+      <h3>Free Consultation</h3>
+      <p>We chat about your business, your goals, and the look you're going for. 15 minutes, no pressure.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">2</div>
+      <h3>Design & Build</h3>
+      <p>I build your custom site and send a preview within 5 days for your feedback.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">3</div>
+      <h3>Revisions</h3>
+      <p>You get 2 rounds of revisions to make sure everything is exactly how you want it.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">4</div>
+      <h3>Launch 🚀</h3>
+      <p>Your site goes live. I handle everything — no tech headaches on your end.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-label">Pricing</div>
+  <h2 class="section-title">One Price. Everything Included.</h2>
+  <p class="section-sub">No hidden fees. No subscriptions. No surprises.</p>
+  <div class="pricing-card">
+    <div class="pricing-label">Complete Website Package</div>
+    <div class="pricing-price"><span>$</span>1,200</div>
+    <div class="pricing-sub">One-time flat fee • Delivered in 7 days</div>
+    <ul class="pricing-features">
+      <li>Custom design (your style, your brand)</li>
+      <li>Mobile-friendly & fast loading</li>
+      <li>Up to 5 pages</li>
+      <li>Contact form & Google Maps</li>
+      <li>2 rounds of revisions</li>
+      <li>SEO basics included</li>
+      <li>1 month of free support after launch</li>
+    </ul>
+    <a href="#contact" class="pricing-btn">Claim Your Spot →</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="section-label">Get Started</div>
+  <h2 class="section-title">Let's Build Your Website</h2>
+  <p class="section-sub">Fill out the form and I'll be in touch within 24 hours.</p>
+  <div class="contact-box">
+    <div class="form-row">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="Jane Smith">
+      </div>
+      <div class="form-group">
+        <label>Business Name</label>
+        <input type="text" placeholder="Jane's Nail Spa">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" placeholder="jane@yourbusiness.com">
+    </div>
+    <div class="form-group">
+      <label>Business Type</label>
+      <select>
+        <option>Beauty / Nail Salon</option>
+        <option>Auto / Trades</option>
+        <option>Restaurant / Café</option>
+        <option>Dental / Medical</option>
+        <option>Law / Professional</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Tell me about your business</label>
+      <textarea placeholder="What do you do, and what do you need from your website?"></textarea>
+    </div>
+    <button class="form-submit">Send My Request →</button>
+  </div>
+</section>
+
+<footer>
+  <span class="logo">Sky Co.</span>
+  <p>West Hills, CA · skylar@skyco.design · Beautiful websites for local businesses</p>
+</footer>
+
+</body>
+</html>
